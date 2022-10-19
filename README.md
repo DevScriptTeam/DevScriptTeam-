@@ -15,5 +15,9 @@ Santiago Barreiro Contreras
 Carlos Guillermo Rojas Prieto
 
 ## Comandos para correr la aplicación.
--No olvidar  hacer pull de la ultima version antes de comenzar! (git pull --rebase).
--Desde la terminal cd tienda, npm start.
+- No olvidar  hacer pull de la ultima version antes de comenzar! (git pull --rebase).
+- Desde la terminal cd tienda, npm start.
+
+## Comandos para correr la aplicación.
+No olvidar hacer pull de la ultima version antes de comenzar! (git pull --rebase).
+Desde la terminal cd tienda, npm start.
