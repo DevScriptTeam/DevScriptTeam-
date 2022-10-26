@@ -4,7 +4,7 @@ Tienda virtual con sistema de inventarios, productos y clientes.
 
 ## Participantes:
 
-Luis Felipe Granda Rivera
+Luis Felipe Granda Rivera #
 
 Cristhian Camilo Jover Perez
 
