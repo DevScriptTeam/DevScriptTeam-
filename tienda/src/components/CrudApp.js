@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import CrudForm from './CrudForm';
 import CrudTable from './CrudTable';
+import jasonVentas from '../datosVentas.json';
+
+
 
 const ventas = [
     {
