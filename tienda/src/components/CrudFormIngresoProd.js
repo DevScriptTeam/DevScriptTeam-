@@ -6,7 +6,7 @@ const initialForm = {
     producto: "",
 };
 
-const CrudForm = ({createData, updateData, dataToEdit, setDataToEdit}) => {
+const CrudFormIngresoProd = ({createData, updateData, dataToEdit, setDataToEdit}) => {
     const [form, setForm] = useState(initialForm);
 
     useEffect(()=>{

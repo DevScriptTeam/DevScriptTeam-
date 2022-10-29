@@ -2,11 +2,13 @@ import React from "react";
 import CrudForm from "./CrudForm";
 import CrudTableRow from "./CrudTableRow";
 
-const CrudTable = ({ data, setDataToEdit, deleteData }) => {
+const CrudTableIngresoProd = ({ data, setDataToEdit, deleteData }) => {
+    
     return (
-        <div>
-            <h3>Tabla de datos</h3>
-            <table>
+        <div >
+            <hr></hr>
+            <h3>Productos</h3>
+            <table className="table">
                 <thead>
                     <tr>
                         <th>Valor</th>
@@ -22,4 +24,4 @@ const CrudTable = ({ data, setDataToEdit, deleteData }) => {
     );
 };
 
-export default CrudTable;
+export default CrudTableIngresoProd;
