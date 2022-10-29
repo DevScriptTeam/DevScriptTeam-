@@ -11,6 +11,12 @@ import CarritoDeCompras from './components/CarritoDeCompras';
 import PaginaPricipal from './components/PaginaPricipal';
 import Main from './components/PaginaPricipal';
 import Menu from './components/Menu' 
+import CrudApp from './components/CrudApp';
+import CrudAppInpresoProd from './components/CrudAppIngresoProd';
+
+//Importando font awesome
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCheckSquare, faCoffee } from '@fortawesome/fontawesome-free-solid'
 
 function App() {
   return (  
@@ -22,10 +28,8 @@ function App() {
       <div className="App">
       <Routes>
         <Route exact path="/" element={<PaginaPricipal/>} />
-        <Route exact path="/carritodecompras" element={<CarritoDeCompras/>}  />
-        <Route exact path="/clienteproductos" element={<CarritoDeCompras/>}  />
-        <Route exact path="/adminproductos" element={<CarritoDeCompras/>}  />      
-        
+        <Route exact path="/adminventas" element={<CrudApp/>}  />     
+        <Route exact path="/adminproductos" element={<CrudAppInpresoProd/>}  />          
       </Routes>      
       </div>
     </Router>

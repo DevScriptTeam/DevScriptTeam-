@@ -23,7 +23,7 @@ const ventas = [
     }
 ];
 
-const CrudApp = () => {
+const CrudAppInpresoProd = () => {
     const [db, setDb] = useState(ventas);
     const [dataToEdit, setDataToEdit] = useState(null);
 
@@ -67,7 +67,7 @@ const CrudApp = () => {
         aria-controls="home"
         aria-selected="true"
       >
-        Nueva venta
+        Nueva Producto
       </button>
     </li>
     <li className="nav-item" role="presentation">
@@ -81,7 +81,7 @@ const CrudApp = () => {
         aria-controls="profile"
         aria-selected="false"
       >
-        Lista de Ventas <span className="badge bg-primary">{db.length}</span>
+        Lista de Productos <span className="badge bg-primary">{db.length}</span>
 
       </button>
     </li>
@@ -112,4 +112,4 @@ const CrudApp = () => {
     )
 }
 
-export default CrudApp;
+export default CrudAppInpresoProd;
