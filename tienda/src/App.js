@@ -3,25 +3,19 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Link,
-  Form
+ 
 } from 'react-router-dom';
 
-import CarritoDeCompras from './components/CarritoDeCompras';
-import PaginaPricipal from './components/PaginaPricipal';
-import Main from './components/PaginaPricipal';
-import Menu from './components/Menu' 
+
+import PaginaPricipal from './components/principal/PaginaPrincipal';
+
+import Menu from './components/principal/Menu' 
 import CrudApp from './components/CrudApp';
 import CrudAppInpresoProd from './components/CrudAppIngresoProd';
 
-//Importando font awesome
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCheckSquare, faCoffee } from '@fortawesome/fontawesome-free-solid'
 
 function App() {
-  return (  
-
-    
+  return (      
 
     <Router>
       <Menu/>

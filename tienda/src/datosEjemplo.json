@@ -1,59 +1,59 @@
 {
     "productos": [
       {
-        "id": "AGOEAFKA087499",
+        "id": "1",
         "urlImagen": "https://picsum.photos/520/300",
         "name": "Apple Iphone 11",
         "description": "Show your Android pride by placing these 8 fun stickers on your technology products or accessories!",
-        "features": "<p>8 Android stickers</p>\n<p>White colored sticker sheet</p>",
-        "price": "2.99"
+        "features": ["8 Android stickers","White colored sticker sheet"],
+        "price": 24.99
       },
       {
-        "id": "BGOEAFKA087599",
+        "id": "2",
         "urlImagen": "https://picsum.photos/520/300",
         "name": "Ipad 4th Generation",
         "description": "Show your quirky side by placing these fun Android stickers on your personal belongings.",
-        "features": "<p>Android Stickers</p>\n<p>White Colored Sticker Sheet</p>",
-        "price": "2.99"
+        "features": ["8 Android stickers","White colored sticker sheet"],
+        "price": 32.99
       },
       {
-        "id": "CGOEAFKA087599",
+        "id": "3",
         "urlImagen": "https://picsum.photos/520/300",
         "name": "Apple Watch 200000",
         "description": "Show your quirky side by placing these fun Android stickers on your personal belongings.",
-        "features": "<p>Android Stickers</p>\n<p>White Colored Sticker Sheet</p>",
-        "price": "2.99"
+        "features": ["8 Android stickers","White colored sticker sheet"],
+        "price": 45.99
       },
       {
-        "id": "DGOEAFKA087599",
+        "id": "4",
         "urlImagen": "https://picsum.photos/520/300",
         "name": "Iphone SE 2022",
         "description": "Este es un celular",
-        "features": "<p>Android Stickers</p>\n<p>White Colored Sticker Sheet</p>",
-        "price": "2.99"
+        "features": ["8 Android stickers","White colored sticker sheet"],
+        "price": 78.99
       },
       {
-        "id": "GGOEAFKA087599",
+        "id": "5",
         "urlImagen": "https://picsum.photos/520/300",
         "name": "iMAC 32\"",
         "description": "Show your quirky side by placing these fun Android stickers on your personal belongings.",
-        "features": "<p>Android Stickers</p>\n<p>White Colored Sticker Sheet</p>",
-        "price": "2.99"
+        "features": ["8 Android stickers","White colored sticker sheet"],
+        "price": 54.99
       },
       {
-        "id": "EGOEAFKA087599",
+        "id": "6",
         "urlImagen": "https://picsum.photos/520/300",
         "name": "Apple Pen",
         "description": "Show your quirky side by placing these fun Android stickers on your personal belongings.",
-        "features": "<p>Android Stickers</p>\n<p>White Colored Sticker Sheet</p>",
-        "price": "2.99"
+        "features": ["8 Android stickers","White colored sticker sheet"],
+        "price": 2.99
       },
       {
-        "id": "EGOEAFKA0875994",
+        "id": "7",
         "urlImagen": "https://picsum.photos/520/300",
         "name": "Bandeja Paisa",
         "description": "Plato tipico",
-        "features": "<p>Android Stickers</p>\n<p>White Colored Sticker Sheet</p>",
+        "features": ["8 Android stickers","White colored sticker sheet"],
         "price": "300"
       }
     ]
