@@ -81,7 +81,7 @@ function PaginaPricipal() {
               descripcion={producto.description}
               precio={producto.price}
               cuandoAdiciona={cuandoAdiciona}
-            />
+            />                    
           );
         })}
       </div>
