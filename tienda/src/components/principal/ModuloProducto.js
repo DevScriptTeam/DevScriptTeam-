@@ -6,7 +6,7 @@ import { faPlusCircle} from '@fortawesome/fontawesome-free-solid'
 
 const ModuloProducto = (props) => {
 
-    const {cuandoAdiciona, producto,url,nombreDeProducto, descripcion, precio,caracteristicas} = props;
+    const {cuandoAdiciona, producto,url,nombreDeProducto, descripcion, precio,caracteristicas, existencias} = props;
     
     return (
     <div className="col-12 col-md-6 col-lg-4  ">
@@ -49,7 +49,16 @@ const ModuloProducto = (props) => {
                             Precio: ${
                                 precio
                             }
+                            
+                            
                         </strong>
+                        <br></br>
+                        <p className="text-muted">
+                        Stock: {
+                                existencias
+                        }
+                        </p>
+                        
                     </div>
                     <div className='col-12'>
                     <Button onClick={() => {cuandoAdiciona(producto)}}>
