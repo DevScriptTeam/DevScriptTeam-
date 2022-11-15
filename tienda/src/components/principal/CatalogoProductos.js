@@ -11,6 +11,8 @@ const CatalogoProductos = props => {
   const { productos } = ListaProductos;
 
 
+
+//Stock de productos
   const [stockProductos, setStockProductos] = useState([ {
         "id": "1",
         "urlImagen": "https://picsum.photos/520/300",
@@ -73,7 +75,7 @@ const CatalogoProductos = props => {
         "features": ["8 Android stickers","White colored sticker sheet"],
         "price": "300",
         "existencias":2
-      }])
+}])
 
 
 
@@ -202,6 +204,11 @@ const CatalogoProductos = props => {
       }
 
   }    
+
+
+
+  
+  
 
     return (
         <div className="row">

@@ -44,7 +44,7 @@ const {elementosCarrito,cuandoAdiciona,cuandoRemueve} = props;
           </Offcanvas.Header>
           <Offcanvas.Body>
             <CarritoDeCompras
-              
+            
               elementosCarrito={elementosCarrito}
               cuandoAdiciona={cuandoAdiciona}
               handleShow={gestionMostrar}

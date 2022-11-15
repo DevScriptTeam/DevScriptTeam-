@@ -20,7 +20,8 @@ function CarritoDeCompras(props) {
                 }
 
                 {
-                    <ul className="list-group list-group-flush">
+                    <>
+                        <ul className="list-group list-group-flush">
                         
                         {
                             elementosCarrito.map(elemento =>{
@@ -70,6 +71,7 @@ function CarritoDeCompras(props) {
                         </div>
                         
                     </ul>
+                    </>
 
                 }
 
