@@ -79,80 +79,84 @@ const CatalogoProductos = props => {
 
 
 
-  //UseState para productos dentro del carrito
-  const [elementosCarrito, setElementosCarrito] = useState([]);
+//UseState para productos dentro del carrito
+const [elementosCarrito, setElementosCarrito] = useState([]);
+
+
+//Productos Comprados
+//UseState para productos dentro del carrito
+const [elementosComprados, setElementosComprados] = useState([]);
 
 
   //Adicionando productos
   const cuandoAdiciona = (producto) => {
+
+
+
     const existe = elementosCarrito.find(
-      (elemento) => elemento.id === producto.id
+      (elemento) => (elemento.id === producto.id)
     );
-    const existeEnCarrito = stockProductos.find(
-        (elemento) => elemento.id === producto.id
-      );
-    if (existe) {
-      setElementosCarrito(
-        elementosCarrito.map((elementoCarrito) =>
-          elementoCarrito.id === producto.id
-            ? { 
-                ...existe, 
-                existencias:
-                existe.existencias > 0 
-                    ? existe.existencias -1 
-                    : existe.existencias,
-                cantidad: 
-                existe.existencias !== 0
-                    ? existe.cantidad + 1
-                    : existe.cantidad
-                
-                
-            }
-            : elementoCarrito        
-            
-        )
-      );    
+
+
+
+    
+    if (existe) {    
+      
+       if (producto.existencias > 0) {
+
+        setElementosCarrito(
+          elementosCarrito.map((elementoCarrito) =>
+          
+          
+            elementoCarrito.id === producto.id 
+              ? { 
+                  ...existe,                  
+                  existencias:
+                  existe.existencias > 0  
+                      ? existe.existencias -1 
+                      : existe.existencias,                 
+                  
+
+                  
+                  cantidad: 
+                  existe.existencias > 0
+                      ? existe.cantidad + 1
+                      : existe.cantidad,         
+                          
+                  
+                  
+              }
+              : elementoCarrito        
+
+
+              
+              
+          )
+
+
+          
+        );   
+        
+       }
+        
+      
       
     } else {
-      setElementosCarrito([
-                            ...elementosCarrito, 
-                            { 
-                                ...producto, 
-                                cantidad: 1,
-                                existencias: producto.existencias -1
-                            }]);
+      if (producto.existencias > 0) {
 
-     }
-
-     if (existeEnCarrito) {
-
-        setStockProductos(
-            stockProductos.map((elementoStock) =>
-              elementoStock.id === producto.id
-                ? { 
-                    ...existeEnCarrito, 
-                    existencias:
-                    existeEnCarrito.existencias > 0 
-                        ? existeEnCarrito.existencias -1 
-                        : existeEnCarrito.existencias,
-                    
-                    
-                    
-                }
-                : elementoStock        
-                
-            )
-          );  
+        setElementosCarrito([
+          ...elementosCarrito, 
+          { 
+              ...producto, 
+              cantidad: 1,
+              existencias: producto.existencias -1
+          }]);
         
-     } else {
-        setStockProductos([
-            ...stockProductos, 
-            { 
-                ...producto, 
-                
-                existencias: producto.existencias -1
-            }]);
-     }
+      }
+
+    }
+
+     
   };
   
 
@@ -163,13 +167,11 @@ const CatalogoProductos = props => {
         (elemento) => elemento.id === producto.id
       );    
 
-      const existeEnCarrito = stockProductos.find(
-        (elemento) => elemento.id === producto.id
-      );
+    
 
       if (existe.cantidad === 1) {
         setElementosCarrito(elementosCarrito.filter(elemento => elemento.id !== producto.id));
-      } else {
+      }  else {
         setElementosCarrito(
             elementosCarrito.map((elementoCarrito) =>
               elementoCarrito.id === producto.id
@@ -186,24 +188,55 @@ const CatalogoProductos = props => {
       }
 
 
-      if (existeEnCarrito.cantidad === 1) {
-        setStockProductos(stockProductos.filter(elemento => elemento.id !== producto.id));
-      } else {
-        setStockProductos(
-            stockProductos.map((elementoStock) =>
-            elementoStock.id === producto.id
-                ? { 
-                    ...existeEnCarrito, 
-                    
-                    existencias:
-                    existeEnCarrito.existencias + 1 
-                }
-                : elementoStock
-            )
-          );
-      }
+     
 
-  }    
+  }   ;
+
+  // Finalizar compra
+
+  const finalizarCompra  = (actualizarCantidadStock) =>{
+
+    actualizarCantidadStock.forEach(actualizarElementoStock => {
+
+      const existe = stockProductos.find(
+        (elemento) => elemento.id === actualizarElementoStock.id 
+      );  
+
+     
+
+      if (existe.existencias > 0) {
+        setStockProductos(
+          stockProductos.map(elementoStock =>
+            elementoStock.id === actualizarElementoStock.id
+            ?{
+              ...existe,
+              existencias:
+              actualizarElementoStock.existencias 
+  
+            }: elementoStock    
+
+           
+            )
+        )     
+
+      
+        
+        //Guardando Elementos comprados.
+        setElementosComprados(elementosCarrito.map(e => (({existencias, ...o})=>o)(e) ))
+        
+
+        //Vaciando Carrito
+        setElementosCarrito([])
+        }
+      
+      
+
+      
+    });
+   
+
+
+  }
 
 
 
@@ -218,6 +251,9 @@ const CatalogoProductos = props => {
                 elementosCarrito={elementosCarrito}
                 cuandoAdiciona={cuandoAdiciona}
                 cuandoRemueve={cuandoRemueve}
+                finalizarCompra={finalizarCompra}
+                stockProductos={stockProductos}
+                setElementosCarrito={setElementosCarrito}
                 
             />    
         </div>        
@@ -235,6 +271,7 @@ const CatalogoProductos = props => {
               caracteristicas={producto.features}
               cuandoAdiciona={cuandoAdiciona}   
               existencias={producto.existencias}      
+              
             />                    
           );
         })}

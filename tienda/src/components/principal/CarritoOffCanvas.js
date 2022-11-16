@@ -13,7 +13,7 @@ import { faShoppingCart } from '@fortawesome/fontawesome-free-solid'
 const CarritoOffCanvas = props => {
 
 
-const {elementosCarrito,cuandoAdiciona,cuandoRemueve} = props;
+const {elementosCarrito,stockProductos,setElementosCarrito,cuandoAdiciona,cuandoRemueve,finalizarCompra} = props;
 
 //Usestate para carrito de compras
   const [show, setShow] = useState(false);
@@ -49,6 +49,9 @@ const {elementosCarrito,cuandoAdiciona,cuandoRemueve} = props;
               cuandoAdiciona={cuandoAdiciona}
               handleShow={gestionMostrar}
               cuandoRemueve ={cuandoRemueve}
+              finalizarCompra={finalizarCompra}
+              stockProductos={stockProductos}
+              setElementosCarrito={setElementosCarrito}
               
             />
           </Offcanvas.Body>
