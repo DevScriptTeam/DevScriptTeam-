@@ -22,7 +22,7 @@ function App() {
       <div className="App">
       <Routes>
         <Route exact path="/" element={<PaginaPricipal/>} />
-        <Route exact path="/adminventas" element={<CrudApp/>}  />     
+        <Route exact path="/adminventas" element={<CrudApp />}  />     
         <Route exact path="/adminproductos" element={<CrudAppInpresoProd/>}  />          
       </Routes>      
       </div>

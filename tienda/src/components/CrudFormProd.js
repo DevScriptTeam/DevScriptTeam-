@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from 'react';
 
 const initialForm = {
-    fecha: "",
     id: null,
-    valor: 0,
+    urlImagen: "",
+    name: "",
+    description: "",
+    features: [],
+    price: null,
+    existencias: null
 };
 
-const CrudForm = ({createData, updateData, dataToEdit, setDataToEdit}) => {
+const CrudFormProd = ({createData, updateData, dataToEdit, setDataToEdit}) => {
     const [form, setForm] = useState(initialForm);
 
     useEffect(()=>{
@@ -26,7 +30,7 @@ const CrudForm = ({createData, updateData, dataToEdit, setDataToEdit}) => {
 
     const handleSubmit = (e) => { 
         e.preventDefault();
-        if (!form.valor || !form.fecha) {
+        if ( !form.name || !form.description || !form.features || !form.price || !form.existencias) {
             alert("Datos incompletos");
             return;
         };
@@ -49,8 +53,12 @@ const CrudForm = ({createData, updateData, dataToEdit, setDataToEdit}) => {
             <h3>{dataToEdit?"Editar":"Agregar"}</h3>
             <form onSubmit={handleSubmit}>
             <div class="input-group mb-3">
-                <input type="number" name="valor" placeholder="Valor" onChange={handleChange} value={form.valor} className='form-control'/>
-                <input type="date" name="fecha" placeholder="Fecha" onChange={handleChange} value={form.fecha} className='form-control' />
+                <input type="text" name="texturl" placeholder="Url" onChange={handleChange} value={form.urlImagen} className='form-control'/>
+                <input type="text" name="name" placeholder="Name" onChange={handleChange} value={form.name} className='form-control' />
+                <input type="text" name="description" placeholder="Description" onChange={handleChange} value={form.description} className='form-control'/>
+                <input type="text" name="features" placeholder="Features" onChange={handleChange} value={form.features} className='form-control' />
+                <input type="number" name="price" placeholder="Price" onChange={handleChange} value={form.price} className='form-control'/>
+                <input type="number" name="existencias" placeholder="Existencias" onChange={handleChange} value={form.existencias} className='form-control' />
             </div>                
                 <input type="submit" value="Enviar" className="btn btn-primary me-1"/>
                 <input type="reset" value="Limpiar" className="btn btn-warning"/>
@@ -59,4 +67,4 @@ const CrudForm = ({createData, updateData, dataToEdit, setDataToEdit}) => {
     )
 }
 
-export default CrudForm;
+export default CrudFormProd;

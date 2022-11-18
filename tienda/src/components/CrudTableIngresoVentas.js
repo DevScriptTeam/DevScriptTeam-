@@ -1,6 +1,6 @@
 import React from "react";
 import CrudForm from "./CrudForm";
-import CrudTableRow from "./CrudTableRowIngresoProd";
+import CrudTableRow from "./CrudTableRow";
 
 const CrudTableIngresoProd = ({ data, setDataToEdit, deleteData }) => {
     
@@ -11,13 +11,9 @@ const CrudTableIngresoProd = ({ data, setDataToEdit, deleteData }) => {
             <table className="table">
                 <thead>
                     <tr>
-                        <th>id</th>
-                        <th>Url</th>
-                        <th>Name</th>
-                        <th>Description</th>
-                        <th>Features</th>
-                        <th>Price</th>
-                        <th>Existencias</th>
+                        <th>Fecha</th>
+                        <th>Id</th>
+                        <th>Valor</th>
                         <th>Acciones</th>
                     </tr>
                 </thead>

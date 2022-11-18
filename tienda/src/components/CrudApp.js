@@ -1,29 +1,31 @@
 import React, { useState } from 'react';
 import CrudForm from './CrudForm';
-import CrudTable from './CrudTableIngresoProd';
+import CrudTable from './CrudTableIngresoVentas';
 import jasonVentas from '../datosVentas.json';
-
+import CatalogoProductos from './principal/CatalogoProductos';
 
 
 const ventas = [
     {
+        fecha: "2/2/2012",
         id: 1,
         valor: 300,
-        producto: "Agua"
     },
     {
+        fecha: "2/2/2012",
         id: 2,
         valor: 3000,
-        producto: "jugo"
     },
     {
+        fecha: "2/2/2012",
         id: 3,
         valor: 4000,
-        producto: "Gaseosa"
     }
 ];
 
+
 const CrudApp = () => {
+    //console.log("Productos: ", CatalogoProductos);
     const [db, setDb] = useState(ventas);
     const [dataToEdit, setDataToEdit] = useState(null);
 

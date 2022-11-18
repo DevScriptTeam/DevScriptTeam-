@@ -1,22 +1,18 @@
 import React from 'react';
 import { useState } from "react";
-
-import ListaProductos from "../stockProductos/datosEjemplo.json";
 import ModuloProducto from "./ModuloProducto";
 import CarritoOffCanvas from "./CarritoOffCanvas";
 
 
+
 const CatalogoProductos = props => {
-
-  const { productos } = ListaProductos;
-
 
 
 //Stock de productos
-  const [stockProductos, setStockProductos] = useState([ {
+ const [stockProductos, setStockProductos] = useState([ {
         "id": "1",
         "urlImagen": "https://picsum.photos/520/300",
-        "name": "Apple Iphone 11",
+        "name": "Apple Iphone 12 por max",
         "description": "Show your Android pride by placing these 8 fun stickers on your technology products or accessories!",
         "features": ["8 Android stickers","White colored sticker sheet"],
         "price": 24.99,
@@ -76,7 +72,6 @@ const CatalogoProductos = props => {
         "price": "300",
         "existencias":2
 }])
-
 
 
 //UseState para productos dentro del carrito
