@@ -12,6 +12,8 @@ import PaginaPricipal from './components/principal/PaginaPrincipal';
 import Menu from './components/principal/Menu' 
 import CrudApp from './components/CrudApp';
 import CrudAppInpresoProd from './components/CrudAppIngresoProd';
+import TestDb from './components/principal/TestDb';
+
 
 
 function App() {
@@ -23,7 +25,8 @@ function App() {
       <Routes>
         <Route exact path="/" element={<PaginaPricipal/>} />
         <Route exact path="/adminventas" element={<CrudApp />}  />     
-        <Route exact path="/adminproductos" element={<CrudAppInpresoProd/>}  />          
+        <Route exact path="/adminproductos" element={<CrudAppInpresoProd/>}  />       
+        <Route exact path="/testdb" element={<TestDb/>} />   
       </Routes>      
       </div>
     </Router>

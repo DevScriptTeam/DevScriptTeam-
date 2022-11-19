@@ -9,69 +9,25 @@ const CatalogoProductos = props => {
 
 
 //Stock de productos
- const [stockProductos, setStockProductos] = useState([ {
-        "id": "1",
-        "urlImagen": "https://picsum.photos/520/300",
-        "name": "Apple Iphone 12 por max",
-        "description": "Show your Android pride by placing these 8 fun stickers on your technology products or accessories!",
-        "features": ["8 Android stickers","White colored sticker sheet"],
-        "price": 24.99,
-        "existencias":7
-      },
-      {
-        "id": "2",
-        "urlImagen": "https://picsum.photos/520/300",
-        "name": "Ipad 4th Generation",
-        "description": "Show your quirky side by placing these fun Android stickers on your personal belongings.",
-        "features": ["8 Android stickers","White colored sticker sheet"],
-        "price": 32.99,
-        "existencias":10
-      },
-      {
-        "id": "3",
-        "urlImagen": "https://picsum.photos/520/300",
-        "name": "Apple Watch 200000",
-        "description": "Show your quirky side by placing these fun Android stickers on your personal belongings.",
-        "features": ["8 Android stickers","White colored sticker sheet"],
-        "price": 45.99,
-        "existencias":12
-      },
-      {
-        "id": "4",
-        "urlImagen": "https://picsum.photos/520/300",
-        "name": "Iphone SE 2022",
-        "description": "Este es un celular",
-        "features": ["8 Android stickers","White colored sticker sheet"],
-        "price": 78.99,
-        "existencias":3
-      },
-      {
-        "id": "5",
-        "urlImagen": "https://picsum.photos/520/300",
-        "name": "iMAC 32\"",
-        "description": "Show your quirky side by placing these fun Android stickers on your personal belongings.",
-        "features": ["8 Android stickers","White colored sticker sheet"],
-        "price": 54.99,
-        "existencias":9
-      },
-      {
-        "id": "6",
-        "urlImagen": "https://picsum.photos/520/300",
-        "name": "Apple Pen",
-        "description": "Show your quirky side by placing these fun Android stickers on your personal belongings.",
-        "features": ["8 Android stickers","White colored sticker sheet"],
-        "price": 2.99,
-        "existencias":5
-      },
-      {
-        "id": "7",
-        "urlImagen": "https://picsum.photos/520/300",
-        "name": "Bandeja Paisa",
-        "description": "Plato tipico",
-        "features": ["8 Android stickers","White colored sticker sheet"],
-        "price": "300",
-        "existencias":2
-}])
+ const [stockProductos, setStockProductos] = useState([])
+
+// Trayendo productos desde la base de datos
+ fetch(
+  'http://localhost:8080/api/productos/',
+  {
+      method: 'GET',
+      
+  }
+).then(response => {
+  if (response.status != 200) {
+      
+      console.log('Error')
+  } else {
+      response.json().then(data => {
+        setStockProductos(data)
+      })
+  }
+});
 
 
 //UseState para productos dentro del carrito
