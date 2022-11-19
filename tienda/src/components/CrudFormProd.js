@@ -30,7 +30,7 @@ const CrudFormProd = ({createData, updateData, dataToEdit, setDataToEdit}) => {
 
     const handleSubmit = (e) => { 
         e.preventDefault();
-        if ( !form.name || !form.description && !form.features && !form.price && !form.existencias) {
+        if ( !form.name || !form.description || !form.features ||!form.price || !form.existencias) {
 
             alert("Datos incompletos");
             return;
