@@ -7,7 +7,7 @@ const CrudTableIngresoProd = ({ data, setDataToEdit, deleteData }) => {
     return (
         <div >
             
-            <h3>Ventas</h3>
+            <h3>Productos</h3>
             <table className="table">
                 <thead>
                     <tr>
